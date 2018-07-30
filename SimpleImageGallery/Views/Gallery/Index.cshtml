@@ -1,0 +1,29 @@
+﻿@model SimpleImageGallery.Data.GalleryIndexModel
+
+
+<div class="container body-content">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a asp-controller="Gallery" asp-action="Index" asp-area="" class="navbar-brand">SimpleImageGallery</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a asp-controller="Image" asp-action="Upload">Upload</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-content">
+        @foreach (var image in Model.Images)
+        {
+            <div class="row gallery-image-container">
+                <a asp-controller="Gallery" asp-action="Detail" asp-route-id="@image.Id">
+                    <div class="gallery-image" style="background-image: url('@image.Url');"></div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
