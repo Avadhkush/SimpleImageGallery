@@ -16,8 +16,29 @@
     height: 300px;
     width: 300px;
     margin: 12px;
-    position:relative;
-    box-shadow: 0 10px 16px rgba(0,0,0,0.2), 0 10px 8px rgba(0,0,0,0.2);    
+    position:relative;        
+}
+.drop-shadow {
+    box-shadow: 0 10px 16px rgba(0,0,0,0.2), 0 10px 8px rgba(0,0,0,0.2);
+}
+
+.image-detail-content{
+    padding:25px;
+}
+.image-detail-container{
+    border-radius:2px;
+}
+.image-detail-meta, .controls {
+    padding: 10px 0px;
+}
+
+.image-upload-content{
+    padding:25px 0px;
+    margin-left:25%;
+}
+.image-upload-container {
+    width: 67%;
+    padding: 25px;
 }
 
 body {

@@ -2,15 +2,15 @@
 
 <div class="container body-content">
     <div class="image-detail-content">
-        <div class="row image-detail-container">
+        <div class="image-detail-container">
             <img src="@Model.Url" alt="@Model.Title" class="img-responsive" />
         </div>
-        <div class="row image-detail-meta">
+        <div class="image-detail-meta">
             <span>@Model.Title</span>
             <span>@Model.Created</span>
         </div>
-        <div class="row controls">
-            <button class="btn btn-primary" >Back to Gallery</button>
+        <div class="controls">
+            <a asp-controller="Gallery" asp-action="Index" asp-area="" class="btn btn-primary">Back to Gallery</a>
         </div>
     </div>
 </div>

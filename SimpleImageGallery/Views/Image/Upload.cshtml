@@ -1,0 +1,29 @@
+﻿@model SimpleImageGallery.Data.GalleryImage
+
+<div class="container body-content">    
+    <div class="image-upload-content">
+        <div class="image-upload-container drop-shadow">
+            <form asp-action="UploadNewImage" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Tags"></label>
+                    <input asp-for="Tags" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="btn btn-default btn-file">
+                        Brose for Image
+                        <input type="file" name="file" style="display:none;" />
+                    </label>
+                </div>
+                <div class="controls">
+                    <button class="btn btn-primary" type="submit">
+                        Upload Image
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
