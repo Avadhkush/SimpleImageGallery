@@ -26,5 +26,11 @@ namespace SimpleImageGallery.Controllers
             };
             return View(model);
         }
+
+        public IActionResult Detail(int Id)
+        {
+            var imageList = _imageService.GetById(Id);            
+            return View(imageList);
+        }
     }
 }

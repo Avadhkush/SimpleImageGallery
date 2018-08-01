@@ -1,21 +1,28 @@
 ﻿@model SimpleImageGallery.Data.GalleryIndexModel
 
 
-<div class="container body-content">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="container body-content">    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a asp-controller="Gallery" asp-action="Index" asp-area="" class="navbar-brand">SimpleImageGallery</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Gallery" asp-action="Index" class="navbar-brand">SimpleImageGallery</a>
             </div>
-            <div class="collapse navbar-collapse">
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a asp-controller="Image" asp-action="Upload">Upload</a>
-                    </li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Image" asp-action="Upload">Upload</a></li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
     <div class="gallery-content">
         @foreach (var image in Model.Images)
         {

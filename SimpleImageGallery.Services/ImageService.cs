@@ -21,7 +21,7 @@ namespace SimpleImageGallery.Services
 
         GalleryImage IImage.GetById(int Id)
         {
-            return _context.GalleryImages.Find(Id);
+            return _context.GalleryImages.Where(t => t.Id == Id).SingleOrDefault();
         }
 
         IEnumerable<GalleryImage> IImage.GetWithTag(string tag)
